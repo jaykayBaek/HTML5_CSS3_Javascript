@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test17.html</title>
+    <!-- text, html
+        값을 가져올 때 form 태그라면 getElementById나 myform.~~~.value로 가져올 수 있으나, form태그가 아닐 때
+        innerText, html로 가져온다.
+    -->
+    <script>
+        'use restrict'
+
+        function fCheck(){
+            let address = document.getElementById("address").value;
+
+            if(address.trim()==""){
+                alert('주소를 입력하시오');
+                document.getElementById(address).focus();
+            }else{
+                console.log("address : " + address);
+                demo.innerText = address;
+                // html = 코드로 번역
+                demo.innerHTML = address;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>
+        이동할 주소를 입력후 이동버튼을 클릭하면, 입력된 주소가
+        가상(demo)에 출력되어, 그 주소를 클릭하면 새창으로 이동한다.
+    </p>
+    <hr/>
+    <form name = "myform">
+        <div>
+            이동할 주소 : <input type="text" name = "address" id = "address" placeholder="이동할 주소를 입력하시오." />
+            <input type ="button" value = "확인" onclick="fCheck()"/>
+        </div>
+    </form>
+    <hr/>
+    <div id ="demo">
+    </div>
+</body>
+</html>

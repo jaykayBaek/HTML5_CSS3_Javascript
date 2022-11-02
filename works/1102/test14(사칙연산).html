@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test14.html</title>
+    <script>
+        'use restrict'
+
+        function add(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            alert(eval(num1)+eval(num2));
+        }
+        function sub(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            alert(eval(num1)-eval(num2));
+        }
+        function mul(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            alert(eval(num1)*eval(num2));
+        }
+        function div(){
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            alert(parseFloat(num1)/parseFloat(num2));
+        }
+    </script>
+</head>
+<body>
+    <h1>사칙연산 계산하기</h1>
+    <form  name="myform" method="get" action="#">
+        <p>
+            <input type="number" id = num1 name = num1 />
+            <input type="number" id = num2 name = num1 />
+        </p>
+        <p>
+            <input type="button" value = "더하기" onclick="add()" />
+            <input type="button" value = "빼기" onclick="sub()" />
+            <input type="button" value = "곱하기" onclick="mul()" />
+            <input type="button" value = "나누기" onclick="div()" />
+        </p>
+    </form>
+</body>
+</html>

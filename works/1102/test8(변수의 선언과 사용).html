@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8.html</title>
+    <!-- 자바스크립트는 link 걸지 않음 
+        typeof? 변수의 타입을 알려줌
+        'use strict'; = 선언문 안 하면 에러뜸 use strict를 쓰면 let 쓰는게 좋음
+        const 는 상수의 개념이다.
+    -->
+    <script>
+        'use strict';
+        const num1 = 100;
+        console.log('num1 : ', num1);
+        console.log(typeof(num1));
+
+        // num1 = 200;
+        // num1 = '서울';
+        // 상수의 const를 수정하려고 하면 에러남.
+        console.log('num1 : ', num1);
+        console.log(typeof(num1));
+        
+        let num2 = 200;
+        console.log('num2 : ', num2);
+        console.log(typeof(num2));
+        
+        let num3;
+        {
+            num3 = 300;
+            console.log('num3 : ', num3);
+            console.log("1:", num2+num3);
+        }
+
+        console.log("2: ", num2+num3);
+    </script>
+</head>
+<body>
+    <h1>자바스크립트 학습</h1>
+</body>
+</html>

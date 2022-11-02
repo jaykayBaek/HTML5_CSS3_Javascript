@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test9.html</title>
+    <script>
+        'use strict';
+        let value = 100;
+        console.log('value? : ', value);
+        console.log('typeof(value)? : ',typeof(value));
+        
+        function msg1(){
+            alert("value? : " + value)    
+            value++;
+        }
+        function msg2(value){
+            alert("value? : " + value)    
+            value++;
+            console.log('value? : '+ value);
+        }
+        function msg3(mbc){
+            alert("value? : " + value)    
+            value+=mbc;
+            console.log('value? : '+ value);
+        }
+    </script>
+</head>
+<body>
+    <h1>변수의 값을 담아서 전송하기</h1>
+    <p>mutable Data type : 변수가 값에 따라 변경되는 것</p>
+    <p><input type="button" value="메세지1" onclick="msg1()"/></p>
+    <p><input type="button" value="메세지2" onclick="msg2(500)"/></p>
+    <p><input type="button" value="메세지3" onclick="msg3(700)"/></p>
+</body>
+</html>

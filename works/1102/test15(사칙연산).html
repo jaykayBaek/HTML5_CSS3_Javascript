@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test14.html</title>
+    <script>
+        'use restrict'
+        function calc(){
+            let res = eval(document.getElementById("num1").value);
+            myform.result.value = res;
+            SubmitEvent
+        }
+
+    </script>
+</head>
+<body>
+    <h1>사칙연산 계산하기</h1>
+    <form  name="myform" method="get" action="#">
+        <p>
+            <input type="text" id = "num1" name = "num1" />
+            <input type="text" id = "result" name = "result" readonly/>
+        </p>
+        <p>
+            <input type="button" value = "계산" onclick="calc()" />
+        </p>
+    </form>
+</body>
+</html>
