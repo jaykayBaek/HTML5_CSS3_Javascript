@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4.html(테이블)</title>
+    <style>
+        table{
+            width: 400px;
+            height: 300px;
+            /*선과 선 사이의 간격을 무시함*/
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid grey;
+        }
+        th{
+            padding: 10px;
+        }
+        td{
+            text-align: center;
+        }
+        thead{
+            background-color: blue;
+        }
+        tfoot{
+            background-color: blueviolet;
+            color: white;
+            text-align: center;
+            height: 30px;
+        }
+        .td3{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>테이블 연습</h1>
+    <br/>
+    <table>
+        <thead>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th class = "td3">3</th>
+                <th>4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td class = "td3">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td class = "td3">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td class = "td3">3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td class = "td3">3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr/>
+    <div id ="layer1"></div>
+</body>
+</html>

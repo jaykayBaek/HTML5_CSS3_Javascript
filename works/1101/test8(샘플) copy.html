@@ -1,0 +1,66 @@
+<!-- 
+    FlexBox는 바둑반 모양의 정렬이 어렵다. 즉, 한 방향 레이아웃에는 적합하다.(1차원)
+    Grid는 2차원구조(행과 열)의 레이아웃으로 작업한다.
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test7.html(Grid Layout)</title>
+    <style>
+        .item{
+            color : #000;
+        }
+
+        /*그리드 형태 정의(grid-template-rows, grid-template-columns)*/
+        /**/
+        .container{
+            display: grid;
+            grid-gap: 0.5rem;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Flex(플랙스)는 Flexible Box, FlexBox라고 부름...
+    주로 레이아웃 배치 전용으로 고안됨.
+    float와 inline-Block등의 불편한점을 보강함.
+-->
+    <div class="container">
+    <div class="item" style="background-color:#2274FF">
+        What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+    <div class="item" style="background-color:#FF7490">
+        2.안녕하세요
+    </div>
+    <div class="item" style="background-color:#a5Cf95">
+        3.안녕하세요
+        3.안녕하세요
+        3.안녕하세요
+    </div>
+    <div class="item" style="background-color:#95B5FF">
+        4.안녕하세요
+    </div>
+    <div class="item" style="background-color:#9675C9">
+        Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+    </div>
+    <div class="item" style="background-color:#69CFE5">6.안녕하세요
+    </div>
+    <div class="item" style="background-color:#F25F9B">
+        7.안녕하세요
+    </div>
+    <div class="item" style="background-color:#E6B046">8.안녕하세요
+    </div>
+    <div class="item" style="background-color:#91DDCD">
+        9.안녕하세요
+    </div>
+    <div class="item" style="background-color:#744383">
+        10.안녕하세요
+    </div>
+</body>
+</html>

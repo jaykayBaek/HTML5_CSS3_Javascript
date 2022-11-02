@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>폼(form) 양식 태그 연습</title>
+  </head>
+
+  <body>
+    <h1>form태그 = 양식태그</h1>
+    <form name="myform" method = "get" action ="#">
+      <table border cellpadding = "10" cellspacing = "0">
+        <tr>
+          <td>
+            <label for = name >이름</label>
+          </td>
+          <td>
+            <input type ="text" name ="name" id="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for = age >나이</label>
+          </td>
+          <td>
+            <input type ="number" age ="name" id="age" size = "3" min = "10" max = "99"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for = mail >메일주소</label>
+          </td>
+          <td>
+            <input type ="mail" name ="mail" id="mail"/>
+          </td>
+        </tr>
+        
+         <tr>
+          <td valign="top">
+            좋아하는 산
+          </td>
+          <td>
+            <select name ="mnt" size = "10" multiple>
+              <option value ="백두산">백두산</option>
+              <option value ="지리산">지리산</option>
+              <option value ="설악산">설악산</option>
+              <option value ="태백산">태백산</option>
+              <option value ="북한산">북한산</option>
+              <option value ="우암산">우암산</option>
+            </select>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>첨부파일</td>
+          <td><input type="file" name="file"/></td>
+        </tr>
+        <tr>
+          <td colspan = "2" align = "center">
+          
+          <!-- sumit은 엔터치면 바로 감, button은 한번 확인하고 넘기겠다.
+              유효성검사는 제어문이 들어가는데, 이는 자바스크립트로 한다.
+           -->
+         <!--   <input type = "submit" value = "전송" /> -->
+            <input type = "reset" value = "다시입력"/>
+            <input type="button" value="회원가입"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

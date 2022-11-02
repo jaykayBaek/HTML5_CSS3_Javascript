@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <title>회원가입 페이지</title>
+  </head>
+  
+  <body bgcolor = "#f5f6f7">
+    <form name ="myform" method="get" action= "#">
+      <table align = "center" border = "0" width ="470px" cellpadding = "10px" cellspacing="0px">
+       <tr>
+         <td align = "center" colspan = "2">
+           <font color = "#00cc66" size = "6"><h1>NAVER</h1></font>
+         </td>
+       </tr>
+       <tr>
+         <td align = "left" colspan = "2">
+           <b>아이디</b>
+         </td>
+       </tr>
+       <tr bgcolor = "white">
+         <td align = "left">
+            <input type = "text" name = "idcheck" id ="idcheck" placeholder = "
+아이디"/>
+         </td>
+         <td>
+           <font color = "grey">@naver.com</font>
+         </td>
+       </tr>
+       <tr>
+         <td align = "left" colspan = "2">
+           <b>비밀번호</b>
+         </td>
+       </tr>
+       <tr bgcolor = "white">
+         <td>
+           <input type = "password" name = "pwdcheck1" id = "pwdcheck1"/>
+         </td>
+         <td align = "right">
+           <img src = ../../images/padlock.png>
+         </td>
+       </tr>
+       <tr>
+         <td colspan = "2">
+           <b>비밀번호 재확인</b>
+         </td>
+       </tr>
+       <tr bgcolor = "white">
+         <td>
+           <input type = "password" name = "pwdcheck2" id = "pwdcheck2"/>
+         </td>
+         <td align = "right">
+           <img src = ../../images/safe.png>
+         </td>
+       </tr>
+       
+       <tr>
+         <td colspan = "2">
+            <b>이름</b>
+          </td>
+       </tr>
+       <tr bgcolor = "white">
+         <td colspan = "2">
+           <input type = "text" name = "nameinput" id ="nameinput"/>
+         </td>
+       </tr>
+       
+       <tr>
+         <td colspan = "2">
+           <b>성별</b>
+         </td>
+       </tr>
+       <tr bgcolor = "white">
+         <td colspan = "2">
+           <select name = "gender">
+             <option value = "남자">남자</option>
+             <option value = "여자">여자</option>
+           </select>
+         </td>
+       </tr>
+       <tr>
+         <td colspan = "2">
+           <b>본인 확인 이메일</b>
+         </td>
+       </tr>
+        <tr bgcolor = "white">
+          <td colspan = "2">
+            <input type = "text" name = "emailinput" id = "emailinput" placeholder = "abcd1234@naver.com"/>
+         </td>
+       </tr>
+        <tr>
+          <td colspan = "2">
+            <b>휴대전화</b>
+          </td>
+        </tr>
+        <tr bgcolor = "white">
+          <td colspan = "2">
+            <select name = "phonenum">
+              <option value = "대한민국 +82">대한민국 +82</option>
+              <option value = "미국/캐나다 +1">미국/캐나다 +1</option>
+            </select>
+          </td>
+        </tr>
+        <tr bgcolor = "white">
+          <td>
+           <input type = "text" name = "phonenum" id = "phonenum" placeholder = "전화번호 입력"/>
+          </td>
+         <td align = "right">
+           <input type="button" value="인증번호 받기"/>
+         </td>
+        </tr>
+        <tr bgcolor = "white">
+          <td colspan = "2">
+            <input type = "text" name = "phonecheck" id = "phonecheck" placeholder = "인증번호를 입력하세요"/>
+          </td>
+        </tr>
+        <tr bgcolor = "#00cc66">
+          <td colspan = "2" align = "center">
+            <input type = "button" name = "btnphonecheck" id = "btnphoncheck" value = "가입하기"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+

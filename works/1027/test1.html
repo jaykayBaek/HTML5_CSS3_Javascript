@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>datalist태그</title>
+  </head>
+  <body>
+    <h1>datalist태그연습</h1>
+    <form name="myform" method="get" oninput="result.value = su1.value * su2.value">
+      <p>
+        <input type = "number" name = "su1" value = "10"/>
+        <input type = "number" name = "su2" value = "20"/>
+        <output name = "result"></output>
+      </p>
+      
+      <p>
+      <!-- datalist의 id와 <input ... list = ""/>의 아이디가 같아야 뿌려줌.
+          검색어와 다른 개념으로, db에서 등록한 것을 열람할 수 있음.-->
+        <input type = "text" name = "item" id = "item" list="choices" />
+        <datalist id = "choices">
+          <option value = "문법" label ="문법"></option>
+          <option value = "어휘" label ="어휘"></option>
+          <option value = "단어" label ="단어"></option>
+          <option value = "독해" label ="독해"></option>
+          <option value = "회화" label ="회화"></option>
+        </datalist>
+      </p>
+      
+      
+      
+    </form>
+  </body>
+</html>
+

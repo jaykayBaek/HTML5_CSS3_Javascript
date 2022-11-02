@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test14.html</title>
+    <style>
+        .tit{
+            width: 100px;
+            background-color: yellow;
+        }
+        #hello1{
+            background-color: pink;
+            /* width: 200px;
+            height: 150px; */
+            padding: 50px;
+            margin:15px;
+            border: 6px solid red
+        }
+        #hello2{
+            background-color: blue;
+
+        }
+        #btnokay{
+            width: 600px;
+        }
+        input[type=text]{
+            color:burlywood;
+            background-color: orange;
+            font-size: 20px;
+            border-radius: 1cm;
+        }
+        .btn{
+            cursor: pointer;
+        }
+        #img1{
+            width: 200px;
+            border-radius: 5%;
+            border: 5px solid blue;
+        }
+        #hello3{
+            line-height: 50px;
+            /* text-align: center; */
+            /* text-indent: 50px; */
+            margin-left: 20px;
+            letter-spacing: 2px;
+            word-spacing: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form태그와 css</h1>
+    <form>
+        <p>
+            <label for="mid" class = "tit">아이디</label>
+            <input type="text" name="mid" id="mid" placeholder = "아이디를 입력하세요."autofocus />
+        </p>
+        <p>
+            <label for="pwd" class = "tit">비밀번호</label>
+            <input type="password" name="pwd" placeholder="비밀번호를 입력하세요" id="pwd" />
+        </p>
+        <p>
+            <label for="age" class = "tit">나이</label>
+            <input type="number" name="age" id="age" placeholder = "나이를 입력하시오."/>
+        </p>
+        <p>
+            <input type="submit" name = "btnokay" class = "btn" value="전송"/>
+            <input type="submit" name = "btnokay" class = "btn" value="취소"/>
+        </p>
+        <p>
+            <img src="../../images/5.jpg" width="300px" id="img1"/>
+        </p>
+        <div id="hello1">1안뇽허세요</div>
+        <div id="hello2">2안뇽허세요</div>
+        <div id="hello3">3안뇽 허세요 반감 습 니다</div>
+        <div id="hello4">4안뇽 허세요</div>
+    </form>
+</body>
+</html>

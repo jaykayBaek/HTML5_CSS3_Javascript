@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>daum.html</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <style>
+        
+        .header{
+            display: grid;
+            font-size: 1em;
+            grid-template-columns: 1060px;
+            align-items: center; /* 수직 가운데 정렬 */
+            justify-content: center; /* 수평 가운데 정렬 */
+        }
+
+        header>.header>.header-top{
+            height: 100px;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .header-top-content:nth-child(1){
+            width: 140px;
+            align-self: flex-end;
+            text-align: center;
+            background-color: green;
+        }
+
+        .header-top-content-left-top{
+            text-align: start;
+            margin: 0px 0px 15px
+        }
+        .header-top-content-left-bot{
+            text-align: start;
+        }
+        
+        .header-top-content:nth-child(2){
+            grid: grid;
+            flex: 1;
+            height: 80px;
+            align-self: flex-end;
+            text-align: start;
+            background-color: orange;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .header-top-content-center-content{
+            text-align: left;
+            justify-content: start;
+            margin: 0px auto;
+        }
+        .header-top-content-center-content>img{
+            margin:0px 0px 300px 0px;
+        }
+        .header-top-content-center-content>input[type="text"] {
+            height: 52px;
+            width: 450px;
+            margin: 0px 0px 0px;
+        }
+        .header-top-content-center-content>input[type="button"] {
+            width: 50px;
+            height: 52px;
+            text-align: right;
+        }
+
+        .header-top-content:nth-child(3){
+            width: 260px;
+            align-self: flex-end;
+            text-align: center;
+            background-color: brown;
+        }
+
+        header>.header>.header-bot{
+            background: red;
+            height: 50px;
+        }
+        .daumStart{
+            font-size:0.5em;
+        }
+
+        .daum{
+            width: 116;
+            height: 48px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class = "header">
+            <div class = "header-top">
+                <div class ="header-top-content-left header-top-content">
+                    <div class = "header-top-content-left-top">
+                        <a href = "https://daum.net" class = "daumStart">다음을 시작페이지로▶</a>
+                    </div>
+                    <div class = "header-top-content-left-bot">
+                        <img src ="../../images/daum.png" class = "daum"/>
+                    </div>
+                </div>
+                <div class ="header-top-content-center header-top-content">
+                    <div class="header-top-content-center-content">
+                        <input type = "text" />
+                        <input type = "button" />
+                    </div>
+                    <div class="header-top-content-center-content">
+                        <img src = "../../images/top-bottom.png">
+                    </div>
+                </div>
+                <div class ="header-top-content-right header-top-content">
+                    333
+                </div>
+            </div>
+            <div class = "header-bot">
+
+            </div>
+        </div>
+        <div class = "section">
+    
+        </div>
+        <div class = "footer">
+    
+        </div>
+    </head>
+</body>
+</html>

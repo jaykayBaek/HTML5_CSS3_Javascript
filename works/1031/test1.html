@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 10px 0px;
+        }
+        .lm5{
+            margin-left: 15px;
+        }
+        #box1{
+            background-color: greenyellow;
+        }
+        #box2{
+            background-color: orange;
+            width: 300px;
+        }
+        .bb1{
+            background-color: blue;
+            width: 100%;
+            height: 100px;
+        }
+        .aa1{
+            background-color: red;
+        }
+        #box3{
+            width: 300px;
+            height: 100px;
+            border: 5px solid black;
+            border-radius: 1ch;
+            margin: 0px 0px;
+            padding: 25px;
+            text-align: center;
+        }
+        #contbox3{
+            width: 700px;
+            height: 250px;
+            background: green;
+            margin: 0px auto;
+        }
+        #box4{
+            width: 400px;
+            height: 92px;
+            background-color: yellow;
+            text-align: center;
+            padding-top: 58px;
+        }
+        #box5{
+            border: 5px dotted green;
+        }
+        #box6{
+            border: 5px double black;
+        }
+        #box7{
+            height: 200px;
+            border: 5px double green;
+            border-radius: 30px 30px 0px 0px;
+            text-align: center;
+            font-size: 3em; /*1em = 16px*/
+            font-weight: bolder;
+            padding: 100px 0px 0px 0px;
+            font-family: 'times new roman','궁서';
+        }
+        #box8{
+            font-variant: small-caps;
+        }
+        #box9{
+            text-transform: lowercase;
+        }
+        #box10{
+            text-transform: uppercase;
+        }
+        #box11{
+            text-decoration: line-through;
+        }
+        #box12{
+            font-size: 50px;
+            font-weight: bolder;
+            text-shadow: 5px 3px 3px green;
+            /*오른쪽(x축), 아래쪽(y축), 흐림의 정도(블러), 그림자 색상*/
+            font-family: Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Box Layout</h1>
+    </div>
+    <div id="box1" class = "box lm5">1.안녕하세요</div>
+    <div id="box2" class = "box">2.안녕하세요</div>
+    <div id="contbox3">
+        <div id="box3" class = "box lm5">3.안녕하세요</div>
+    </div>
+    <div id="box4" class = "box">4.안녕하세요</div>
+    <div id="box5" class = "box lm5">5.안녕하세요</div>
+    <div id="box6" class = "box">6.안녕하세요</div>
+    <div id="box7" class = "box">7.안녕하세요 Hello, World!</div>
+    <div id="box8" class = "box">8.안녕하세요 Hello, World!</div>
+    <div id="box9" class = "box">9.안녕하세요Hello, World!</div>
+    <div id="box10" class = "box">10.안녕하세요Hello, World!</div>
+    <div id="box11" class = "box">11.안녕하세요Hello, World!</div>
+    <div id="box12" class = "box">12.안녕하세요Hello, World!</div>
+    <div>
+        hello, <span class="aa1">world</span>
+    </div>
+    <div class="bb1">
+
+    </div>
+</body>
+</html>

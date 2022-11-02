@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test10.html</title>
+    <style>
+        /*ol 밑의 ul이란 뜻(사과, 배, 바나나 ,딸기)
+        li 생략 가능
+        자손선택자 : (공백)으로 구분한다
+        */
+        ol ul{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>선택자(자식, 자손)</h1>
+    <h2>길동이가 좋아하는 음식 best5!</h2>
+    <ol>
+        <li>짜장면</li>
+        <li>찐빵</li>
+        <li>과일</li>
+            <ul>
+                <li>사과</li>
+                <li>배</li>
+                <li>바나나</li>
+                <li>딸기</li>
+            </ul>
+        <li>초콜릿</li>
+        <li>피자</li>
+    </ol>
+    <hr/>
+    <h1>선택자(자식, 자손)</h1>
+    <h2>길동이가 좋아하는 음식 다섯 가지</h2>
+    <ol>
+        <li>짜장면</li>
+        <li>찐빵</li>
+        <li>과일</li>
+            <ul id = "fruit">
+                <li>홍옥</li>
+                <li>국광</li>
+                <li>맥캔토시</li>
+            </ul>
+        <li>초콜릿</li>
+        <li>피자</li>
+        </ol>
+</body>
+</html>
