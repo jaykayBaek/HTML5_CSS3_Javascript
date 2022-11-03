@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스연습2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Noto Sans KR', 'times new roman',sans-serif;
+        }
+    </style>
+    <script>
+        'use strict'
+/* 
+    변수의 중복(fCheck, fCelar)으로 hobbyCount를 밖으로 뺌 -> 함수 안에서 변수가 적용되지 않음.
+    왜? script위치가 위에 있어서
+*/
+    let hobbyCount = document.getElementsByName("hobby").length;
+        function fCheck(){
+            let hobby="";
+            console.log("hobbyCount?" + hobbyCount);
+            for(let i=0; i<hobbyCount; i++){
+                if(document.getElementsByName("hobby")[i].checked){
+                    hobby+=document.getElementsByName("hobby")[i].value + " "
+                }
+            }
+            demo.innerHTML = hobby + " <input type='button' value ='초기화' onclick='fClear()'/>";
+        }
+        
+        function fClear(){
+            // let hobbyCount = document.getElementsByName("hobby").length;
+            for(let i=0; i<hobbyCount; i++){
+                document.getElementsByName("hobby")[i].checked = false;
+            }
+            demo.innerText="";
+        }
+    </script>
+</head>
+<body>
+    <h1>체크박스 연습2 Practice</h1>
+    <form name = "myform">
+        <p>취미 : 
+            <input type = "checkbox" name ="hobby" id="hobby1" value = "등산" />등산 &nbsp;
+            <input type = "checkbox" name ="hobby" id="hobby2" value = "낚시" />낚시 &nbsp;
+            <input type = "checkbox" name ="hobby" id="hobby3" value = "볼링" />볼링 &nbsp;
+            <input type = "checkbox" name ="hobby" id="hobby4" value = "바둑" />바둑 &nbsp;
+            <input type = "checkbox" name ="hobby" id="hobby5" value = "수영" />수영 &nbsp;
+            <button type ="button" onclick="fCheck()">출력</button>
+        </p>
+    </form>
+    <hr/>
+
+    <div id = "demo">
+    </div>
+</body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수</title>
+
+</head>
+<body>
+    <h1>익명함수(anonymous function)</h1>
+    <p>
+        <input type="button" value = "일반함수연습" onclick ="fCheck1()">
+        <input type="button" value = "익명함수연습" onclick ="fCheck2()">
+    </p>
+    <hr/>
+    <div id ="demo"></div>
+
+        <script>
+        'use strict'
+        let cnt = 0;
+
+        function fCheck1(){
+            cnt++;
+            demo.innerHTML = "이곳은 일반함수입니다. (cnt =<font color='red'><b> "+cnt+"</b></font>)";
+        }
+        //익명함수(함수명이 없는 함수) 이름이 없기에 변수에 함수를 담음
+        // 이름은? 사용자 단에서 onclick = "" <- ""안에 있는 이름으로
+        // 스크립트 body.단에서 사용한 이유? demo의 값을 먼저 읽어야 하기 때문에.
+        let fCheck2 = function (){
+            cnt++;
+            demo.innerHTML = "이곳은 익명함수입니다. (cnt =<font color='red'><b> "+cnt+"</b></font>)";
+        }
+
+        fCheck1();
+        fCheck2();
+    </script>
+</body>
+</html>

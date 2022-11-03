@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열연습</title>
+    <script>
+        'use strict';
+
+        /*
+        배열 선언 : int[] arr = new int[]; <-자바식
+        배열 선언 : new Array(); <- JS 일반적인 방법
+        */
+        // 방법 1. new Array()
+        const arr1 = new Array();
+        console.log("arr1 : " + arr1);
+        console.log("===============");
+        // 방법2. ['값1', '값2'....];
+        const arr2 = ['사과', '배', '바나나', '귤'];
+        console.log("arr2 : " + arr2);
+        console.log("arr2의 길이? " + arr2.length);
+        console.log("index0 " + arr2[0]);
+        console.log("index1 " + arr2[1]);
+        console.log("index3 " + arr2[3]);
+        console.log("===============");
+        
+        for(let i=0; i<arr2.length; i++){
+            console.log("arr2["+i+"] = " + arr2[i]);
+        }
+
+        // arr2 배열의 마지막 자료를 출력하세요?
+        console.log("arr2배열의 마지막요소 : "+arr2[arr2.length-1]);
+        console.clear();
+        /*
+        for(타입명 개별항목변수 : 객체명(배열명)) {} 자바식 향상된 for문
+        for(String arr : arr2) {}
+        */
+        
+        //js 향상된 for문 : for(let 변수명 of 객체명)
+        let cnt = 0;
+        for (let arr of arr2) {
+            console.log("arr2["+cnt+"] = " + arr);
+            cnt++;
+        }
+</script>
+</head>
+<body>
+    <h1>배열연습</h1>
+</body>
+</html>
