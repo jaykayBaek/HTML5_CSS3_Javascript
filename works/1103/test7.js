@@ -15,7 +15,7 @@ function regexCheck() {
     const regex11 = /[a-zA-Z0-9]/g;  // 영문 '대/소문자'나 '숫자'가 포함되어 있느냐?
     const regex12 = /[^a-zA-Z0-9]/g;  // 영문 '대/소문자'나 '숫자'외에 다른 문자가 포함되어 있느냐?
     //영문 대/소문자와 숫자만 입력받도록 (3가지 요소가 다 들어가야 한다.)
-    const regex13 = /[a-z][A-Z][0-9]/gm
+    const regex13 = /[a-z]+[A-Z]+[0-9]/gm
     const regex14 = /\./g //문자열 중에서 .을 포함하는가?
     const regex15 = /\d/g //숫자를 포함하는가?
     const regex16 = /\D/g //숫자를 포함하고 있지 않느냐?
