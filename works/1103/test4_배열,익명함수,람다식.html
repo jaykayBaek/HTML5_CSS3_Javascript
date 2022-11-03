@@ -43,7 +43,34 @@
             console.log("arr2["+cnt+"] = " + arr);
             cnt++;
         }
-</script>
+
+        //forEach문을 이용한 반복 출력 : 객체명.forEach();
+        //ex) forEach(function(arr, index, arrayName)){}
+        // forEach문에 기능을 넣겠다 -> 익명함수를 적어야 한다 -> 괄호 안에 익명함수를 씀.
+        arr2.forEach(function(){
+            console.log("값 : " + "/");
+        });
+        console.log("----------------");
+        // 향상된 for문? (b of a) a에서 준 값을 b가 받는다
+        // a.forEach(function(b)) a에서 준 값을 b가 받는다
+        arr2.forEach(function(arr){
+            console.log(arr+"/");
+        })
+        console.log("----------------");
+        // 1.익명함수를 arrowFunction으로 처리함 function을 지우고 ()와 {} 사이 => 추가
+        arr2.forEach((arr) => {
+            console.log(arr+"/");
+        });
+        console.log("----------------");
+        // 2.한줄만 있을시?
+        arr2.forEach((arr)=>console.log(arr+"/"));
+        console.log("----------------");
+        // 3.원래는 forEach(function(arr, index, arrayName)){}
+        arr2.forEach((arr, index)=>console.log(index + " : " +arr+"/"));
+        // 배열을 사용할 때는 향상된 for문보다는 forEach가 속도가 빠름
+        // 객체와 객체를 연결할 때는 ? x
+
+    </script>
 </head>
 <body>
     <h1>배열연습</h1>
