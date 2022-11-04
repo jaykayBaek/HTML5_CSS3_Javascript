@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜함수2</title>
+    <script src = "test10.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src = "test9.js"></script>
+    <style>
+        *{
+            font-family: 'Helvetica, Noto Sans KR', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>날짜 비교하기</h1>
+    <form name="myform">
+        <h2>시스템의 날짜와 비교하기</h2>
+        <input type="button" value="시스템의 날짜 가져오기" onclick="bringDate()">
+        <div><input type="text" name="startDate" id="startDate"></div>
+        <hr/>
+        <div>
+            <p>날짜형식에 맞도록 비교할 날짜를 입력하세요<br/>
+                <input type="text" name="endDate" id="endDate" value="2022-11-05">
+                <input type="button" value = "날짜비교1" onclick="compareDate()">
+                <input type="button" value = "날짜비교2" onclick="compareDate2()">
+            </p>
+            <div id = "demo"></div>
+        </div>
+    </form>
+</body>
+</html>

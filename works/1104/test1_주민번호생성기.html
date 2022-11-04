@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주민번호생성기(체크기)</title>
+    <script>
+        'use strict';
+        function juminCheck(){
+            let jumin1 = document.getElementById("jumin1").value;
+            if(jumin1.length == 6){
+                // isNan = 논 뉴메릭이니?
+                if(isNaN(jumin1)){
+                    alert("숫자만 입력하세요.");
+                    document.getElementById("jumin1").focus();
+                    document.getElementById("jumin1").select();
+                }else{
+                    document.getElementById("jumin2").focus();
+                }
+            }
+        }
+        
+        function juminCheck(){
+            let jumin1 = document.getElementById("jumin1").value;
+            let jumin2 = document.getElementById("jumin2").value;
+            
+            if(jumin1.trim()=="" || jumi2.trim()=="" || jumin1.trim()!=6 || jumin2.trim()!=7){
+                alert("주민번호를 정확히 입력하세요.");
+                document.getElementById("jumin1").focus();
+            } else if(isNaN(jumin1) || isNaN(jumin2)){
+                alert("주민번호는 숫자만 입력하세요.");
+                document.getElementById("jumin1").focus();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>주민번호 체크</h1>
+    <p>
+        주민번호 :
+        <input type="text" name = "jumin1" id = "jumin1" size = "6" maxlength="6" autofocus required onkeyup="juminCheck()"/> - 
+        <input type="password" name = "jumin2" id = "jumin2" size = "7" maxlength="7" required/>
+        <input type="button" value="주민번호체크" onclick="juminCheck()"/>
+        <input type="reset" value ="다시입력">
+    </p>
+    <hr/>
+    <div id="demo"></div>
+</body>
+</html>
