@@ -39,8 +39,14 @@
                 statusTime = setInterval(clock, 1000);
             }
             let clock_stop = () => {
-                clearInterval(statusTime)
+                clearInterval(statusTime);
             }
+            let clock_hello = () => {
+                let a = `<img src = "../../images/1.jpg"/>`;
+                let b = `<img src = "../../images/2.jpg"/>`;
+                demo.innerHTML=a+b;
+            }
+
         </script>
         </style>
     </head>
@@ -50,6 +56,7 @@
             <p>
                 <input type="button" value="동작" onclick="clock_start()" class = "btn btn-secondary"/>
                 <input type="button" value="정지" onclick="clock_stop()" class = "btn btn-danger"/>
+                <input type="button" value="헬로" onclick="clock_hello()" class = "btn btn-danger"/>
             </p>
             <hr/>
             <div id="demo"></div>
