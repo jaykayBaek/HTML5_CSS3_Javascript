@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class객체.html</title>
+    <script src = "test13.js"></script>
+    <script>
+        'use strict';
+        
+        class ChildClass extends Member{
+            
+        }
+
+        let childClass = new ChildClass("홍길동", 25, "빨강");
+        console.log("성명 : " + childClass.name +", 나이 : " +childClass.age + ', 색깔 : ' + childClass.color);
+        let childClass2 = new ChildClass("김말숙", -25, "껌정");
+        console.log("성명 : " + childClass2.name +", 나이 : " +childClass2.age + ', 색깔 : ' + childClass2.color);
+    </script>
+</head>
+<body>
+    <h2>클래스 연습(상속)</h2>
+
+</body>
+</html>

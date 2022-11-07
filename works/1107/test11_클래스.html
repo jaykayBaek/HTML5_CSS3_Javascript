@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class(객체) 선언/사용 예제</title>
+    <script>
+        'use strict';
+        
+        /*자바식으로 만들기*/
+        // 클래스 만들기
+        class Member {
+            // 필드명
+            name;
+            age;
+
+            /* 기본 생성자
+            constructor(){
+            }
+            */
+            // 생성자
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+                //_name = name; //JS는 자바의 this를 _로 쓸 수 있음.
+            }
+
+            /* memberPrint(){
+            }
+            */
+            memberPrint = () =>{
+                document.write("성명 : " + this.name+", 나이 : " + this.age + "<br/>");
+            }
+        }
+        let member = new Member('백정광', 24);
+        document.write("1: " + member.name + " / " + member.age + "<br/>");
+        member.memberPrint();
+    </script>
+</head>
+<body>
+    <h1>클래스연습</h1>
+</body>
+</html>
