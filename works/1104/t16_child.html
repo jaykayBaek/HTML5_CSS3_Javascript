@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 중복 체크창 - 자식창</title>
+    <script>
+        'use script';
+        let receiveMid = ()=>{
+            // document.getElementById('mid').value = __부모창의 아이디__ opener : 나를 호출한(부모창)을 뜻함.
+            document.getElementById('mid').value = opener.document.getElementById('mid').value;
+        }
+
+        let winClose = () => {
+            opener.document.getElementById('mid').value = document.getElementById('mid').value;
+            opener.document.getElementById('pwd').focus();
+            window.close();
+        }
+
+        let sendMid = () =>{
+            opener.document.getElementById("mid").value=document.getElementById("mid").value;
+        }
+    </script>
+</head>
+<body>
+    <div class = "container">
+        <h1>아이디 중복체크창</h1>
+        <p>
+            아이디 : <input type="text" name = "mid" id ="mid" autofocus />
+        </p>
+        <p>
+            <input type="button" value="아이디가져오기" onclick="receiveMid()" class ="btn"/>
+            <input type="button" value="아이디넘겨주기" onclick="sendMid()"/>
+            <input type="button" value="창닫기" onclick="winClose()"/>
+        </p>
+    </div>
+</body>
+</html>

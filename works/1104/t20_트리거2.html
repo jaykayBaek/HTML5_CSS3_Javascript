@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트리거</title>
+    <script>
+        let num1 = 0;
+        let num2 = 0;
+
+        let tClick1 = () =>{
+            demo1.innerHTML = ++num1;
+            if(num1%5 == 0){
+                tClick2();
+            }
+        }
+        let tClick2 = () =>{
+            demo2.innerHTML = ++num2;
+            if(num2%10==0){
+                tClick1();
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>트리거연습</h2>
+        <form name = "myform">
+            <p><input type="button" value = "트리거1" name ="triggar1" onclick = "tClick1()" class = "btn"/></p>
+            <p><input type="button" value = "트리거2" name ="triggar2" onclick = "tClick2()" class = "btn"/></p>
+        </form>
+        <hr/>
+        <div>
+            <span>demo1 ?</span>
+            <div id="demo1"></div>
+        </div>
+        <div>
+            <span>demo2 ?</span>
+            <div id="demo2"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onLoad이벤트처리</title>
+    <script>
+        'use strict';
+
+        // alert("1.안녕하세요~");
+        let onLoadFunct = () => {
+            alert("2. 환영합니다");
+        }
+        let onUnLoadFunct = () => {
+            alert("3. ㅂㅇㅂㅇ");
+            // location.href = "https://www.naver.com";
+        }
+    </script>
+</head>
+<body onload = "onLoadFunct()" onunload="onUnLoadFunct()">
+    <h1>onLoad이벤트</h1>
+    <input type="button" value = "onLoad호출" onclick = "onLoadFunct()"/>
+    <input type="button" value = "onUnLoad호출" onclick = "onUnLoadFunct()"/>
+</body>
+</html>

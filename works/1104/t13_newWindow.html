@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>newWindow.html(새창띄우기)</title>
+    <script>
+        let newWidow = ()=>{
+            let url = "https://naver.com"
+            let windowName = "naver"; //생략가능, 생략 안 하는게 좋음
+            let opt = "width=100vh, height=100vh, left=300px, top=200px";
+            window.open(url, windowName, opt);
+        }
+    </script>
+    <STYLE>
+        body{
+            width:100vh;
+            height:100vh;
+        }
+    </STYLE>
+</head>
+<body>
+    <h1>새창띄우기 - 부모창</h1>
+    <p><input type="button" value = "새창띄우기" onclick="newWidow()"/></p>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새창에 값 넘기기</title>
+    <style>
+    </style>
+    <script>
+        'use strict';
+        let newWindow = ""
+        let id_check = () =>{
+            let url = "t16_child.html";
+            let wName = "test16";
+            let opt = "width=500px, height = 400px, left = 300px, top=200px";
+            let mid = document.getElementById("mid").value;
+            
+            if(mid.trim()==""){
+                alert("아이디를 입력하세요.");
+                document.getElementById("mid").focus();
+                return false;
+                window.close();
+            }
+            newWindow = window.open(url,wName,opt);
+        }
+        let child_close = () =>{
+            // window.close(); 현재 창이 닫힌다.
+            newWindow.close();
+        }
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <h1>새창에 값 넘기기:이곳은 부모창입니다.</h1>
+        <form name="myform">
+            <p>
+                아이디 : <input type="text" name = "mid" id ="mid" autofocus required />
+                <input type="button" value="아이디중복체크" onclick="id_check()" />
+            </p>
+            <p>
+                비밀번호 : <input type="password" name = "pwd" id ="pwd" autofocus required />
+                <input type="button" value="비밀번호중복체크" onclick="pwd_check()" />
+            </p>
+            <p>
+                <input type="button" value = "자식창닫기" onclick="child_close()" />
+            </p>
+        </form>
+
+    
+</body>
+</html>

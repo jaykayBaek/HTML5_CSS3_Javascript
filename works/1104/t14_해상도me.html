@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해상도</title>
+    <script>
+        'use strict';
+        
+        let device_check = ()=>{
+            let str ="";
+            str += "화면 해상도의 가로 크기? " + screen.width+"<br/>"
+            str += "화면 해상도의 세로 크기? " + screen.height+"<br/>"
+            str += "사용자의 작업영역 가로크기 " + screen.+"<br/>"
+            // str += "화면 해상도의 가로 크기? " + screen.width+"<br/>"
+            // str += "화면 해상도의 가로 크기? " + screen.width+"<br/>"
+            // str += "화면 해상도의 가로 크기? " + screen.width+"<br/>"
+            // str += "화면 해상도의 가로 크기? " + screen.width+"<br/>"
+            demo.innterHTML = str;
+
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <hr/>
+        <h1>screen객체를 이용한 모니터(device)의 해상도 알아오기</h1>
+        <p><input type="button" value="해상도" onclick="device_check()" class = "btn"></p>
+        <div id="demo"></div>
+    </div>
+</body>
+</html>

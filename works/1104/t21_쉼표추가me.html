@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쉼표추가</title>
+    <script>
+        let commaInput = ()=>{
+            let num = myform.num.value;
+            if(num == "" || isNaN(num)){
+                alert("숫자만 입력하세요.")
+                myform.num.select();
+                myform.num.focus();
+                return false;
+            }
+            else if(num.substring(0,1) == 0){
+                alert("첫번째 숫자에 0이 올 수 없어요");
+            }
+            //숫자값만 출력되었으면 콤마함수를 출력함
+            let comma = (num)=>{
+                let numLen = num.length;
+                let numStr = "";
+                let numPoint=numLen%3;
+    
+                numStr = num.substring(0, numPoint);
+    
+                numStr = num(0, numPoint)
+                while(numPoint<numLen){
+                    if(numStr != ""){
+                        numStr += ",";
+                    }
+                    numStr += num.substring(numPoint, numPoint+3);
+                    numPoint += 3;
+                }
+                return numStr;
+            }
+            demo.innerHTML=comma(num);
+        }
+        // 쉼표표시하기 함수(1234567 => 1,234,567)
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>쉼표처리</h2>
+        <form name="myform">
+            <p>
+                숫자 : <input type="text" name = "num" autofocus/>
+            </p>
+            <p>
+                <input type="button" value = "쉼표추가" onclick="commaInput()" class = "btn"/>
+                <input type="reset" value="다시입력" class="btn"/>
+            </p>
+        </form>
+        <hr/>
+
+    </div>
+</body>
+</html>
