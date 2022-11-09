@@ -1,0 +1,90 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        'use strict';
+        $(function(){
+            $('#google').addClass('userHover');
+            $('#google').removeClass('userHover');
+
+            // $('#menu2 button').mouseenter(function(){
+            //     console.log("gd");
+            //     $(this).addClass('buttonHover');
+            // });
+            // $('#menu2 button').mouseleave(function(){
+                //     console.log("b2");
+                //     $(this).removeClass('buttonHover');
+                // });
+                // 안돼서 쌤걸로 ㄱㄱ 
+
+        });
+
+    </script>
+    <style>
+        div#menu1{
+            margin: 0 auto;
+            padding: 5px;
+            /* border: 1px solid gray; */
+            width: 100%;
+            display: flex;
+            flex-grow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        button.default{
+            border: 0px;
+            width: 7em;
+            background-color: red;
+            color:white;
+            font-weight: bolder;
+            font-size: 2em;
+            opacity: 0.5;
+        }
+        button.default2{
+            border: 0px;
+            width: 7em;
+            background-color: red;
+            color:white;
+            font-weight: bolder;
+            font-size: 2em;
+            opacity: 0.5;
+        }
+        #menu1 > button:hover {
+            opacity: 1;
+        }
+        
+        .buttonHover{
+            opacity: 1;
+        }
+
+        .userHover{
+            background-color: yellow;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <h1 id = "google">Introduce Google</h1>
+        <div id="menu1">
+            <button class = "default">회사소개</button>
+            <button class = "default">CEO소개</button>
+            <button class = "default">사업소개</button>
+            <button class = "default">제품소개</button>
+        </div>
+        <hr/>
+        <h1 id = "google2">Introduce Google</h1>
+        <div id="menu2">
+            <button class = "default2">회사소개</button>
+            <button class = "default2">CEO소개</button>
+            <button class = "default2">사업소개</button>
+            <button class = "default2">제품소개</button>
+        </div>
+        <hr/>
+        <div id="demo"></div>
+    </div>
+</body>
+</html>
