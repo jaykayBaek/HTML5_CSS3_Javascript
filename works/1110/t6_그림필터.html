@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림필터</title>
+    
+    <style>
+        img{
+            width: 500px;
+            height: auto;
+        }
+        #img1{
+            /* 희미하게 처리 */
+            filter:blur(5px);
+        }
+        #img2{
+            /* 그림 밝게 처리 */
+            filter:brightness(200%);
+        }
+        #img3{
+            /* 대비(선명도) */
+            filter:contrast(50%);
+        }
+        #img4{
+            /* 흑백 처리*/
+            filter:grayscale(100%);
+        }
+        #img5{
+            /* 색상으로 조절 */
+            filter:hue-rotate(50);
+        }
+        #img6{
+            /* 그림보색관계로뒤집기 */
+            filter:invert(50);
+        }
+        #img7{
+            /* 불투명도 */
+            filter:opacity(0.5);
+        }
+        #img8{
+            /* 채도 */
+            filter:saturate(5);
+        }
+        #img9{
+            /* 오렌지모드? */
+            filter:sepia(50);
+        }
+        #img10{
+            /* 그림자효과 */
+            filter:drop-shadow(5px 5px 3px black);
+        }
+    </style>
+</head>
+<body>
+    <h1>그림필터적용하기!</h1>
+    <hr/>
+    <div id = "flex">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img1">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img2">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img3">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img4">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img5">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img6">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img7">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img8">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img9">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img10">
+        <img src="../../images/1.jpg" alt="흰 강아지 그림" id="img11">
+    </div>
+</body>
+</html>

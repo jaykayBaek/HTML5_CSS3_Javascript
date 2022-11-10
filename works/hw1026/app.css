@@ -1,0 +1,46 @@
+body a nav ul li a section article{
+    margin: 0px;
+    padding: 0px;
+    display:flex;
+    flex-flow: column wrap;
+}
+body a{
+    text-decoration: none;
+    color:black;
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.menu{
+    
+    display: flex;
+    justify-content: center;
+    /* align-items: cent; */
+    width: 40%;
+    background-color: beige;
+    border: 1px solid black;
+
+}
+.menu>li{
+    margin:0px 2em;
+}
+.menu li{
+    list-style: none;
+}
+.sub_title{
+    padding: 0px;
+    display: flex;
+    align-items: right;
+    justify-content: center;
+    flex-flow: column wrap;
+    /* background: red; */
+}
+
+    /* 서브메뉴... */
+.menu ul {
+padding: 0px;
+display: none;
+}

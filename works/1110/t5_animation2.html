@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블속성</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <script>
+    'use strict';
+    $(function(){
+      let y = 0;
+      let z = 0;
+      $('#move_right').click(function(){
+        z=z+10;
+        if(z>=100){
+          alert("더이상 움직일 수 없습니다!");
+        }else{
+          $('#img1').animate(
+            {marginLeft:(z)+"%"},
+            {"width":"100px", "height":"100px"}
+            );
+          }
+        });
+        $('#move_left').click(function(){
+          if(z<=0){
+            alert("더이상 움직일 수 없습니다!");
+          }else{
+            $('#img1').animate(
+              {marginLeft:z-10+"%"},
+              {"width":"100px", "height":"100px"}
+              );
+              z=z-10;
+          }
+      });
+      $('#move_up').click(function(){
+        console.log(y);
+        if(y<=0){
+          alert("더이상 움직일 수 없습니다!");
+        }else{
+          $('#img1').animate(
+            {marginTop:(y)-10+"%"},
+            {"width":"100px", "height":"100px"}
+            );
+            y=y-10;
+          }
+        });
+        $('#move_down').click(function(){
+          y=y+10;
+          if(y>=100){
+            alert("더이상 움직일 수 없습니다!");
+          }else{
+            $('#img1').animate(
+              {marginTop:(y)+"%"},
+              {"width":"100px", "height":"100px"}
+              );
+          }
+      });
+    });
+  </script>
+  <style>
+    article{
+      display: flex;
+      flex-grow: row wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+<p><br/></p>
+<section>
+  <div class="container">
+    <h2>Animation 연습</h2>
+    <hr/>
+    <article>
+      <div>
+        <button type="button" name="move_left" id="move_left" class="btn-sm btn-primary">왼쪽이동</button>
+      </div>
+      <div>
+      <button type="button" name="move_right" id="move_right" class="btn-sm btn-primary">오른쪽이동</button>
+      </div>
+      <div>
+        <button type="button" name="move_up" id="move_up" class="btn-sm btn-primary">위쪽이동</button>
+      </div>
+      <div>
+        <button type="button" name="move_down" id="move_down" class="btn-sm btn-primary">아래쪽이동</button>
+      </div>
+    </article>
+    <br/><hr/><br/>
+    <div>
+      <img src="../../images/1.jpg" width="100px" height="100px" id="img1"/>
+    </div>
+  </div>
+</section>
+<p><br/></p>
+</body>
+</html>
