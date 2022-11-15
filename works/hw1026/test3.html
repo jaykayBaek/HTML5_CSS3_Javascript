@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+    <script>
+        'use strict';
+        let idx = 0;
+        let total = 0;
+        let add_product_list = () => {
+            let price_total = 0;
+            let formTag = "";
+            idx++;
+            formTag += '<p id = "idx'+idx+'">';
+            formTag += '<span>구매자</span>';
+            formTag += '<input type="text" name="buyer" id="buyer" value = "'+document.getElementById("buyer").value+'" readonly/>';
+            formTag += '<span>상품명</span>';
+            formTag += '<input type="text" name="product_name" id="product_name" value = "'+document.getElementById("product_name").value+'" readonly/>';
+            formTag += '<span>가격</span>';
+            formTag += '<input type="number" name="product_price" id="product_price" value = "'+document.getElementById("product_price").value+'" readonly/>';
+            formTag += '<span>수량</span>';
+            formTag += '<input type="number" name="product_cnt" id="product_cnt" value = "'+document.getElementById("product_cnt").value+'" readonly/>';
+            formTag += '<span>상품분류</span>';
+            formTag += '<input type="text" name="sorting_list" id="sorting_list" value = "'+product.options[product.selectedIndex].value+'" readonly/>';
+            formTag += '<button onclick = "delete_row('+idx+')">삭제</button>';
+            formTag += '</p>';
+            demo.innerHTML += formTag;
+            // formTag += '<div class = "demo"></div>';
+        }
+
+        let delete_row = (idx) => {
+            let tmpIdx = "idx"+idx;
+            let item = document.getElementById(tmpIdx);
+            item.parentNode.removeChild(item);
+        }
+    </script>
+    <style>
+        body{
+            font-family: 'Noto Sans KR', sans-serif;
+
+        }
+        section{
+            background: #1d3557;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        article{
+            display:flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            background: #457b9d;
+        }
+        article>div{
+            display:flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            /* text-align: center; */
+        }
+        article>div>div{
+            width:49%;
+        }
+        article>div>div:nth-child(1){
+            text-align: right;
+            margin-right: 1rem;
+        }
+  
+        
+    </style>
+</head>
+<body>
+    <section>
+        <article>
+            <h1>상품가격구하기</h1>
+            <div>
+                <div>구매자</div>
+                <div><input type="text" name="buyer" id ="buyer" /></div>
+            </div>
+            <div>
+                <div>상품분류</div>
+                <div>
+                    <select name="product" id="product">
+                        <option name = product value="가전제품">가전제품</option>
+                        <option name = product value="전자기기">전자기기</option>
+                        <option name = product value="가구">가구</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <div>상품명</div>
+                <div><input type="text" name="product_name" id ="product_name" /></div>
+            </div>
+            <div>
+                <div>상품가격</div>
+                <div><input type="text" name="product_price" id ="product_price" /></div>
+            </div>
+            <div>
+                <div>수량</div>
+                <div><input type="number" name = "product_cnt" id = "product_cnt" /></div>
+            </div>
+            <div>
+                <button onclick = "add_product_list()">상품추가하기</button>
+            </div>
+            <form name = "myform" method = "post" action = "<%=request.getContextPath()%>/j1114_Test3Ok">
+
+            </form>
+            <p>
+                <div id = "demo"></div>
+            </p>
+            <p>
+                <div>
+                    <span>상품등록하기</span>
+                    <span><button>상품등록</button></span>
+                </div>
+            </p>
+        </article>
+    </section>
+</body>
+</html>
